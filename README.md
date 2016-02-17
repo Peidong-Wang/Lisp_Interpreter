@@ -1,5 +1,8 @@
 # Lisp_Interpreter
 
+Containing Lisp scanner, parser and interpreter (with buildin functions only).
+
 By Peidong Wang
 
-1/27, 2016
+_Last Update:_
+2/17, 2016
