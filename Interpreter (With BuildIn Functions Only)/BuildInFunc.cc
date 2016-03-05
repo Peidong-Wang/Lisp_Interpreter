@@ -271,7 +271,7 @@ void lisp_plus(linked_list_node** operation_node){
 		exit(0);
 	}
 	if ((temp_node->left_node->val.at(0) > '9' || temp_node->left_node->val.at(0) < '0' || temp_node->left_node->left_node != NULL || temp_node->left_node->right_node != NULL) || (temp_node->right_node->left_node->val.at(0) > '9' || temp_node->right_node->left_node->val.at(0) < '0' || temp_node->right_node->left_node->left_node != NULL || temp_node->right_node->left_node->right_node != NULL)){
-		if (temp_node->left_node->val.at(0) == '-'){
+		if (temp_node->left_node->val.at(0) != '-'){
 			if (temp_node->left_node->val.length() == 1){
 				cout << "ERROR: Evaluation undefined for PLUS (Parameter Type Mismatch) (From Interpreter)" << endl;
 				exit(0);
@@ -309,7 +309,7 @@ void lisp_minus(linked_list_node** operation_node){
 		exit(0);
 	}
 	if ((temp_node->left_node->val.at(0) > '9' || temp_node->left_node->val.at(0) < '0' || temp_node->left_node->left_node != NULL || temp_node->left_node->right_node != NULL) || (temp_node->right_node->left_node->val.at(0) > '9' || temp_node->right_node->left_node->val.at(0) < '0' || temp_node->right_node->left_node->left_node != NULL || temp_node->right_node->left_node->right_node != NULL)){
-		if (temp_node->left_node->val.at(0) == '-'){
+		if (temp_node->left_node->val.at(0) != '-'){
 			if (temp_node->left_node->val.length() == 1){
 				cout << "ERROR: Evaluation undefined for MINUS (Parameter Type Mismatch) (From Interpreter)" << endl;
 				exit(0);
@@ -347,7 +347,7 @@ void lisp_times(linked_list_node** operation_node){
 		exit(0);
 	}
 	if ((temp_node->left_node->val.at(0) > '9' || temp_node->left_node->val.at(0) < '0' || temp_node->left_node->left_node != NULL || temp_node->left_node->right_node != NULL) || (temp_node->right_node->left_node->val.at(0) > '9' || temp_node->right_node->left_node->val.at(0) < '0' || temp_node->right_node->left_node->left_node != NULL || temp_node->right_node->left_node->right_node != NULL)){
-		if (temp_node->left_node->val.at(0) == '-'){
+		if (temp_node->left_node->val.at(0) != '-'){
 			if (temp_node->left_node->val.length() == 1){
 				cout << "ERROR: Evaluation undefined for TIMES (Parameter Type Mismatch) (From Interpreter)" << endl;
 				exit(0);
@@ -385,7 +385,7 @@ void lisp_less(linked_list_node** operation_node){
 		exit(0);
 	}
 	if ((temp_node->left_node->val.at(0) > '9' || temp_node->left_node->val.at(0) < '0' || temp_node->left_node->left_node != NULL || temp_node->left_node->right_node != NULL) || (temp_node->right_node->left_node->val.at(0) > '9' || temp_node->right_node->left_node->val.at(0) < '0' || temp_node->right_node->left_node->left_node != NULL || temp_node->right_node->left_node->right_node != NULL)){
-		if (temp_node->left_node->val.at(0) == '-'){
+		if (temp_node->left_node->val.at(0) != '-'){
 			if (temp_node->left_node->val.length() == 1){
 				cout << "ERROR: Evaluation undefined for LESS (Parameter Type Mismatch) (From Interpreter)" << endl;
 				exit(0);
@@ -425,7 +425,7 @@ void lisp_greater(linked_list_node** operation_node){
 		exit(0);
 	}
 	if ((temp_node->left_node->val.at(0) > '9' || temp_node->left_node->val.at(0) < '0' || temp_node->left_node->left_node != NULL || temp_node->left_node->right_node != NULL) || (temp_node->right_node->left_node->val.at(0) > '9' || temp_node->right_node->left_node->val.at(0) < '0' || temp_node->right_node->left_node->left_node != NULL || temp_node->right_node->left_node->right_node != NULL)){
-		if (temp_node->left_node->val.at(0) == '-'){
+		if (temp_node->left_node->val.at(0) != '-'){
 			if (temp_node->left_node->val.length() == 1){
 				cout << "ERROR: Evaluation undefined for GREATER (Parameter Type Mismatch) (From Interpreter)" << endl;
 				exit(0);
