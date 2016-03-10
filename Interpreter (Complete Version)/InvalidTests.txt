@@ -1,0 +1,30 @@
+(DEFUN)
+
+(DEFUN F)
+
+(DEFUN F ())
+
+(DEFUN (X Y) () (PLUS 1 1))
+
+(DEFUN T () (PLUS 1 1))
+
+(DEFUN PLUS () (PLUS 1 1))
+
+(DEFUN F X (PLUS 1 1))
+
+(DEFUN F ((X)) (PLUS 1 1))
+
+(DEFUN F (T) (PLUS 1 1))
+
+(DEFUN F (EQ X Y) (PLUS 1 1))
+
+(DEFUN F (X X) (PLUS X 1))
+
+(DEFUN F (X) (PLUS X 1))
+(F)
+
+(DEFUN F (X) (PLUS X 1))
+(F 1 2)
+
+(F 1)
+(DEFUN F (X) (PLUS X 1))
