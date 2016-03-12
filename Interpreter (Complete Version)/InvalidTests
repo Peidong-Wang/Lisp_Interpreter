@@ -28,3 +28,9 @@
 
 (F 1)
 (DEFUN F (X) (PLUS X 1))
+
+(DEFUN F (X) (X NIL))
+(F NULL)
+
+(DEFUN F (X) (CAR (CONS (X NIL) NIL)))
+(F NULL)

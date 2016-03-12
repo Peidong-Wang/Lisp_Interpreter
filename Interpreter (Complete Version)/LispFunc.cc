@@ -48,7 +48,7 @@ void lisp_operation(linked_list_node* root_node, linked_list_node** cur_node){
 			lisp_func("DEFUN", cur_node);
 			break;
 		}
-		else if ((function_address = lisp_d_list_search((*cur_node)->left_node->val)) != NULL){
+		else if ((function_address = lisp_d_list_search((*cur_node)->left_node->val)) != NULL && ((*cur_node)->parent_node == NULL || (*cur_node)->parent_node->left_node == (*cur_node))){
 			lisp_apply(function_address, cur_node);
 			break;
 		}
@@ -120,10 +120,10 @@ void lisp_func(string function_name, linked_list_node** operation_node){
 	else if (function_name.compare("DEFUN") == 0){
 		lisp_defun(operation_node);
 	}
-	else if ((function_address = lisp_d_list_search(function_name)) != NULL){
+	else if ((function_address = lisp_d_list_search(function_name)) != NULL && ((*operation_node)->parent_node == NULL || (*operation_node)->parent_node->left_node == (*operation_node))){
 		lisp_apply(function_address, operation_node);
 	}
-	else if ((temp_node_a_val_address = lisp_a_list_search(function_name)) != NULL){
+	else if ((*operation_node)->parent_node != NULL && (*operation_node)->parent_node->left_node != (*operation_node) && (temp_node_a_val_address = lisp_a_list_search(function_name)) != NULL){
 		flag_root_val = 1;
 		lisp_deep_copy(temp_node_a_val_address, (*operation_node)->left_node, 0, &flag_root_val);
 	}
