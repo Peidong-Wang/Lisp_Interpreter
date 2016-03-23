@@ -34,3 +34,7 @@
 
 (DEFUN F (X) (CAR (CONS (X NIL) NIL)))
 (F NULL)
+
+(DEFUN 1 (X) (CONS X T))
+
+(DEFUN F (X 1) (CONS X T))
