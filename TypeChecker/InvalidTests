@@ -1,0 +1,31 @@
+(EQ 5 T)
+
+(NULL 5)
+
+(COND ((CONS 4 NIL) T) (T 5))
+
+(PLUS)
+
+(PLUS 3 4 5)
+
+(PLUS T 5)
+
+(CAR NIL) 
+
+(COND (F 5) (T NIL))
+
+(COND (T 10) (T V))
+
+(CAR (COND (F NIL) (T (CONS 1 NIL))))
+
+(CAR (CONS 2 (CONS NIL NIL)))
+
+(CAR NIL)
+
+X
+
+(CAR (COND (F NIL) (T (CONS 1 NIL))))
+
+(())
+
+(F)

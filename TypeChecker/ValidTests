@@ -1,0 +1,19 @@
+(COND (F 5) (T 6))
+
+(CAR (CONS 2 (CONS 3 NIL)))
+
+(CAR (COND (F (CONS 1 NIL)) (T (CONS 1 NIL))))
+
+F
+
+NIL
+
+()
+
+T
+
+(CONS 8 NIL)
+
+(NULL ())
+
+(NULL NIL)
